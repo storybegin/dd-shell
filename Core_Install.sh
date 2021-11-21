@@ -7,6 +7,10 @@
 ## Support GRUB or GRUB2 for installing a clean minimal system.
 ## Technical support is provided by the CXT (CXTHHHHH.com). (based on the original version of Vicer)
 
+## WebUI Modify version author:
+## Default root password: Same as Magic Modified Version
+## Written By Flyqie
+
 ## Magic Modify version author:
 ## Default root password: cxthhhhh.com
 ## WebSite: https://www.cxthhhhh.com
@@ -41,7 +45,7 @@ export setInterfaceName='0'
 export UNKNOWHW='0'
 export UNVER='6.4'
 # --- Flyqie ---
-export ddWebBinUrl='http://192.168.1.216:2333/go_build_dd_web_linux_linux'
+export ddWebBinUrl='https://github.com/flyqie/dd-web/releases/download/v0.1/ddWeb_20211121_linux_amd64'
 export retryNum='0'
 export errorExit=''
 export successExit='-successexit'
