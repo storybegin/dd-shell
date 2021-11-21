@@ -836,6 +836,8 @@ WinRDP(){
   echo -ne "cd\0040\0057d\0040\0042\0045ProgramData\0045\0057Microsoft\0057Windows\0057Start\0040Menu\0057Programs\0057Startup\0042\r\ndel\0040\0057f\0040\0057q\0040net\0056bat\r\n\r\n\r\n" >>'/tmp/boot/net.tmp';
   iconv -f 'UTF-8' -t 'GBK' '/tmp/boot/net.tmp' -o '/tmp/boot/net.bat'
   rm -rf '/tmp/boot/net.tmp'
+  # --- Flyqie ---
+  # 虽然感觉应该是没啥用了,但是还是保留下吧,没准哪天会用上
   echo "$DDURL" |grep -q '^https://'
   [[ $? -eq '0' ]] && {
     echo -ne '\nAdd ssl support...\n'
@@ -849,11 +851,14 @@ WinRDP(){
     exit 1;
     }
   }
+  # --- Flyqie ---
 }
 
 [[ "$ddMode" == '0' ]] && {
   sed -i '/anna-install/d' /tmp/boot/preseed.cfg
-  sed -i 's/wget.*\/sbin\/reboot\;\ //g' /tmp/boot/preseed.cfg
+  # --- Flyqie ---
+  sed -i 's/chmod 755 \/dd_web.*\/sbin\/reboot\;\ //g' /tmp/boot/preseed.cfg
+  # --- Flyqie ---
 }
 
 elif [[ "$linux_relese" == 'centos' ]]; then
@@ -932,7 +937,9 @@ chown root:root $GRUBDIR/$GRUBFILE
 chmod 444 $GRUBDIR/$GRUBFILE
 
 if [[ "$loaderMode" == "0" ]]; then
-  sleep 3 && reboot >/dev/null 2>&1
+  # --- Flyqie ---
+  sleep 6 && reboot >/dev/null 2>&1
+  # --- Flyqie ---
 else
   rm -rf "$HOME/loader"
   mkdir -p "$HOME/loader"
