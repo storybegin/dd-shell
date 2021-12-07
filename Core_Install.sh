@@ -45,7 +45,7 @@ export setInterfaceName='0'
 export UNKNOWHW='0'
 export UNVER='6.4'
 # --- Flyqie ---
-export ddWebBinUrl='https://github.com/flyqie/dd-web/releases/download/v0.1/ddWeb_20211121_linux_amd64'
+export ddWebBinUrl='https://ghproxy.com/github.com/flyqie/dd-web/releases/download/v0.1/ddWeb_20211121_linux_amd64'
 export retryNum='0'
 export errorExit=''
 export successExit='-successexit'
